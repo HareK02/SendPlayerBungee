@@ -37,7 +37,7 @@ bukkit {
         register("bsend") {
             description = "send player to bungee server"
             usage = "/bsend <player> <server>"
-            permission = "hcu.command"
+            permission = "bsend.command"
             permissionMessage = permissionMessage
         }
     }
