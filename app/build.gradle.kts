@@ -14,7 +14,7 @@ repositories {
 }
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    compileOnly("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
 }
 tasks {
     shadowJar {
@@ -29,6 +29,7 @@ bukkit {
     name = "SendPlayerBungee"
     description = "just server command to send player to bungee server"
     version = getVersion().toString()
+		apiVersion = "1.20"
     authors =
             listOf(
                 "Hare-K02",
@@ -44,7 +45,7 @@ bukkit {
     permissions {
         register("bsend.command") {
             description = "Allows you to run the command"
-            default = BukkitPluginDescription.Permission.Default.FALSE // TRUE, FALSE, OP or NOT_OP
+            default = BukkitPluginDescription.Permission.Default.OP
         }
 		}
 }
