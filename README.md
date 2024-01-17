@@ -12,3 +12,6 @@ send player to bungee server
 
 ## permission
 `bsend.command` : allow use command (default: op)
+
+## build
+`./gradlew shadowJar` : build plugin jar file
